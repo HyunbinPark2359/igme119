@@ -41,10 +41,6 @@ public class Projectile : MonoBehaviour
             boxCollider.enabled = false;
             gameObject.SetActive(false);
         }
-        else if (collision.gameObject.tag == "Player")
-        {
-            return;
-        }
     }
 
     public void SetDirection(float _direction)

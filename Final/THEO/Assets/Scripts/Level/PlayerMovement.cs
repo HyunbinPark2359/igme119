@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator anim;
     private bool grounded;
     private bool running;
+    private ScreenDetector myScreenDetector;
 
     public bool IsGrounded
         { get { return grounded; } }
@@ -20,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
         // Grab references for rigidbody and animator from object
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        myScreenDetector = GetComponent<ScreenDetector>();
 
         moveSpeed = speed;
     }
@@ -70,6 +72,8 @@ public class PlayerMovement : MonoBehaviour
         anim.SetBool("walking", horizontalInput != 0);
         anim.SetBool("running", running && horizontalInput != 0);
         anim.SetBool("grounded", grounded);
+
+        BoundariesAroundTheEdges();
     }
 
     private void Jump()
@@ -83,6 +87,27 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             grounded = true;
+        }
+    }
+
+    private void BoundariesAroundTheEdges()
+    {
+        if (transform.position.x < myScreenDetector.screenLeft) // Left boundary
+        {
+            transform.position = new Vector3(myScreenDetector.screenLeft, transform.position.y, transform.position.z);
+        }
+        else if (transform.position.x > myScreenDetector.screenRight) // Right boundary
+        {
+            transform.position = new Vector3(myScreenDetector.screenRight, transform.position.y, transform.position.z);
+        }
+
+        if (transform.position.y < myScreenDetector.screenBottom) // Bottom boundary
+        {
+            transform.position = new Vector3(transform.position.x, myScreenDetector.screenBottom, transform.position.z);
+        }
+        else if (transform.position.y > myScreenDetector.screenTop) // Top boundary
+        {
+            transform.position = new Vector3(transform.position.x, myScreenDetector.screenTop, transform.position.z);
         }
     }
 }

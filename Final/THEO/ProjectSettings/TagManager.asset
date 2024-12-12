@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - Enemy
+  - Projectile
   layers:
   - Default
   - TransparentFX
@@ -12,10 +14,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Projectile
+  - Player
+  - Enemy
+  - Ground
   - 
   - 
   - 
@@ -41,4 +43,25 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3703794047
+    locked: 0
+  - name: Foreground
+    uniqueID: 31623855
+    locked: 0
+  - name: Enemy
+    uniqueID: 3323676463
+    locked: 0
+  - name: Player
+    uniqueID: 1595218815
+    locked: 0
+  - name: Spirit
+    uniqueID: 2187459837
+    locked: 0
+  - name: Projectile
+    uniqueID: 249656365
+    locked: 0
+  - name: Ground
+    uniqueID: 1306066963
     locked: 0
