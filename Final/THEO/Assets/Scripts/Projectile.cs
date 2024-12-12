@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    [SerializeField] private float speed;
-    private float direction;
-    private bool hit;
-    private BoxCollider2D boxCollider;
+    [SerializeField] protected float speed = 6.0f;
+    [SerializeField] protected float range = 5.0f;
+    private Vector3 direction = Vector3.right;
+    protected bool hit;
+    protected BoxCollider2D boxCollider;
     private float lifetime;
 
     private void Awake()
@@ -22,28 +23,34 @@ public class Projectile : MonoBehaviour
             return;
         }
 
-        float movementSpeed = speed * Time.deltaTime * direction;
-        transform.Translate(movementSpeed, 0, 0);
+        Vector3 velocity = direction * speed * Time.deltaTime;
+        transform.position += velocity;
 
         lifetime += Time.deltaTime;
-        if (lifetime > 5)
+        if (lifetime > range / speed)
         {
             gameObject.SetActive(false);
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
-        hit = true;
-        boxCollider.enabled = false;
-        gameObject.SetActive(false);
-        Debug.Log("Hit");
+        if (collision.gameObject.tag == "Ground")
+        {
+            hit = true;
+            boxCollider.enabled = false;
+            gameObject.SetActive(false);
+        }
+        else if (collision.gameObject.tag == "Player")
+        {
+            return;
+        }
     }
 
     public void SetDirection(float _direction)
     {
         lifetime = 0;
-        direction = _direction;
+        direction.x = _direction;
         gameObject.SetActive(true);
         hit = false;
         boxCollider.enabled = true;
@@ -53,7 +60,19 @@ public class Projectile : MonoBehaviour
         {
             localScaleX = -localScaleX;
         }
-
         transform.localScale = new Vector3(localScaleX, transform.localScale.y, transform.localScale.z);
+
+        transform.rotation = Quaternion.identity;
+    }
+
+    public void PlantSeed()
+    {
+        lifetime = 0;
+        direction = Vector3.down;
+        gameObject.SetActive(true);
+        hit = false;
+        boxCollider.enabled = true;
+
+        transform.rotation = Quaternion.identity;
     }
 }

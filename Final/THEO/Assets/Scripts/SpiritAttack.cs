@@ -2,18 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAttack : MonoBehaviour
+public abstract class SpiritAttack : MonoBehaviour
 {
-    [SerializeField] private float attackCooldown;
-    [SerializeField] private Transform firePoint;
-    [SerializeField] private GameObject[] bullets;
-    private PlayerMovement myPlayerMovement;
-    private float cooldownTimer = Mathf.Infinity;
-
-    private void Awake()
-    {
-        myPlayerMovement = GetComponent<PlayerMovement>();
-    }
+    [SerializeField] protected float attackCooldown = 1.0f;
+    [SerializeField] protected GameObject[] bullets;
+    protected float cooldownTimer = Mathf.Infinity;
 
     private void Update()
     {
@@ -25,24 +18,20 @@ public class PlayerAttack : MonoBehaviour
         cooldownTimer += Time.deltaTime;
     }
 
-    private void Attack()
-    {
-        cooldownTimer = 0;
+    protected abstract void Attack();
 
-        bullets[FindBullet()].transform.position = firePoint.position;
-        bullets[FindBullet()].GetComponent<Projectile>().SetDirection(Mathf.Sign(transform.localScale.x));
-    }
-
-    private int FindBullet()
+    protected virtual int FindBullet()
     {
-        for (int i = 0; i < bullets.Length; i++)
         {
-            if (!bullets[i].activeInHierarchy)
+            for (int i = 0; i < bullets.Length; i++)
             {
-                return i;
+                if (!bullets[i].activeInHierarchy)
+                {
+                    return i;
+                }
             }
-        }
 
-        return 0;
+            return 0;
+        }
     }
 }

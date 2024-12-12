@@ -12,6 +12,9 @@ public class PlayerMovement : MonoBehaviour
     private bool grounded;
     private bool running;
 
+    public bool IsGrounded
+        { get { return grounded; } }
+
     private void Awake()
     {
         // Grab references for rigidbody and animator from object
