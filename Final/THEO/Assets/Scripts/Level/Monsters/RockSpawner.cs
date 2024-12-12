@@ -22,7 +22,7 @@ public class RockSpawner : EnemySpawner
     {
         base.SetSpawnPoint();
 
-        spawnPoint.y = -3.16391f;
+        spawnPoint.y = -3.400309f;
     }
 
     public int FindRock()

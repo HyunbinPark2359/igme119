@@ -21,7 +21,7 @@ public class ButtonController : MonoBehaviour, IPointerEnterHandler, IPointerExi
     {
         buttonHighlightedEffect.transform.position = this.transform.position;
         buttonHighlightedEffect.enabled = true;
-        waterSpirit.transform.position = this.transform.position + new Vector3(-400, 0, 0);
+        waterSpirit.transform.position = this.transform.position + new Vector3(-300, 0, 0);
         waterSpirit.enabled = true;
     }
 

@@ -14,12 +14,14 @@ public abstract class Enemy : MonoBehaviour
     protected float time = 0.0f;
     protected bool isMoving = false;
     protected bool isResting = false;
+    private Animator anim;
 
     protected void Awake()
     {
         direction.x = Random.Range(0, 2) * 2 - 1;
         boxCollider = GetComponent<BoxCollider2D>();
         myScreenDetector = GetComponent<ScreenDetector>();
+        anim = GetComponent<Animator>();
     }
 
     protected void Update()
@@ -44,6 +46,13 @@ public abstract class Enemy : MonoBehaviour
         {
             velocity = Vector3.zero;
         }
+
+        float localScaleX = transform.localScale.x;
+        if (Mathf.Sign(localScaleX) != Mathf.Sign(direction.x))
+        {
+            localScaleX = -localScaleX;
+        }
+        transform.localScale = new Vector3(localScaleX, transform.localScale.y, transform.localScale.z);
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
@@ -53,26 +62,26 @@ public abstract class Enemy : MonoBehaviour
             hit = true;
             isMoving = false;
             boxCollider.enabled = false;
-            gameObject.SetActive(false);
+            GetComponent<Rigidbody2D>().gravityScale = 0.0f;
+            anim.SetTrigger("die");
         }
     }
 
-    public void Spawn()
+    public virtual void Spawn()
     {
         gameObject.SetActive(true);
         hit = false;
         boxCollider.enabled = true;
-        float localScaleX = transform.localScale.x;
-        if (Mathf.Sign(localScaleX) != direction.x)
-        {
-            localScaleX = -localScaleX;
-        }
-        transform.localScale = new Vector3(localScaleX, transform.localScale.y, transform.localScale.z);
     }
 
     protected abstract void Move();
 
     protected abstract void Wander();
+
+    private void Deactivate()
+    {
+        gameObject.SetActive(false);
+    }
 
     private void BoundariesAroundTheEdges()
     {

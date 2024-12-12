@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a1692f85f4a2db44288b3224990cafc3
+guid: e83739a5db52eb24fac8fa6084f43443
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlayGameButton
+      name: Bat_0
       rect:
         serializedVersion: 2
-        x: 738
-        y: 363
-        width: 443
-        height: 65
+        x: 0
+        y: 400
+        width: 200
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7c4f0483cb7f3d42902182a9e176945
-      internalID: -261408246
+      spriteID: a3bb93ec14df76c4a9e17474f409363f
+      internalID: -1031713690
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ControlsButton
+      name: Bat_1
       rect:
         serializedVersion: 2
-        x: 745
-        y: 249
-        width: 428
-        height: 65
+        x: 200
+        y: 400
+        width: 200
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3cb57139cf7d23d4196a21ce86983994
-      internalID: -603203042
+      spriteID: 69adb070405f9eb459a34fac884345ac
+      internalID: -1021228653
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: QuitGameButton
+      name: RockDeath_0
       rect:
         serializedVersion: 2
-        x: 755
-        y: 132
-        width: 409
-        height: 68
+        x: 0
+        y: 200
+        width: 200
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,8 +192,155 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8e923c4ed22b7a4db0aa32000b3088a
-      internalID: 1511340987
+      spriteID: cea3914342162344d9520065599a4dcc
+      internalID: 622432308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RockDeath_1
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 200
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4127c0dd4c76dc844a056a37d0d690db
+      internalID: 100315929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RockDeath_2
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 200
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ade01512b222b7049be9b6650128566b
+      internalID: 220228412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RockDeath_3
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 200
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d6f813e46c4e1e43a5b9befa764ccab
+      internalID: -2035528089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RockDeath_4
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 200
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2bd39a4b9882e9498cdafb363bf2225
+      internalID: -1923442965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BatDeath_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25d38a15027fc2544898f620d276f1a8
+      internalID: 2075062115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BatDeath_1
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dad510be408f4c46bcf0195cb563ad4
+      internalID: 1989745938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BatDeath_2
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4c0986355a5a4c49965d818724f2791
+      internalID: -2035720388
       vertices: []
       indices: 
       edges: []
@@ -209,9 +356,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ControlsButton: -603203042
-      PlayGameButton: -261408246
-      QuitGameButton: 1511340987
+      BatDeath_0: 2075062115
+      BatDeath_1: 1989745938
+      BatDeath_2: -2035720388
+      Bat_0: -1031713690
+      Bat_1: -1021228653
+      RockDeath_0: 622432308
+      RockDeath_1: 100315929
+      RockDeath_2: 220228412
+      RockDeath_3: -2035528089
+      RockDeath_4: -1923442965
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

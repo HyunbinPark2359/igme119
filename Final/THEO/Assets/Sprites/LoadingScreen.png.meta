@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a1692f85f4a2db44288b3224990cafc3
+guid: 5fefdcbd9f93efe45b08949a55bf9409
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlayGameButton
+      name: LoadingScreen_0
       rect:
         serializedVersion: 2
-        x: 738
-        y: 363
-        width: 443
-        height: 65
+        x: 0
+        y: 0
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7c4f0483cb7f3d42902182a9e176945
-      internalID: -261408246
+      spriteID: e6401a02dff641842be1c366f1967b3c
+      internalID: -1420757722
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ControlsButton
+      name: LoadingScreen_1
       rect:
         serializedVersion: 2
-        x: 745
-        y: 249
-        width: 428
-        height: 65
+        x: 1920
+        y: 0
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,29 +171,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3cb57139cf7d23d4196a21ce86983994
-      internalID: -603203042
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: QuitGameButton
-      rect:
-        serializedVersion: 2
-        x: 755
-        y: 132
-        width: 409
-        height: 68
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c8e923c4ed22b7a4db0aa32000b3088a
-      internalID: 1511340987
+      spriteID: b572b4ceacfa73444a0fed80b0169ab5
+      internalID: 24792570
       vertices: []
       indices: 
       edges: []
@@ -209,9 +188,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ControlsButton: -603203042
-      PlayGameButton: -261408246
-      QuitGameButton: 1511340987
+      LoadingScreen_0: -1420757722
+      LoadingScreen_1: 24792570
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

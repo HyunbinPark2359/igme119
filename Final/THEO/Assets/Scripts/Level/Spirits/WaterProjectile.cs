@@ -5,12 +5,6 @@ using UnityEngine;
 
 public class WaterProjectile : Projectile
 {
-    private void Start()
-    {
-        speed = 8.0f;
-        range = 20.0f;
-    }
-
     protected override void OnCollisionEnter2D(Collision2D collision)
     {
         base.OnCollisionEnter2D(collision);

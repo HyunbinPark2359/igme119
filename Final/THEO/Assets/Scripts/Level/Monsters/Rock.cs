@@ -1,9 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 public class Rock : Enemy
 {
+    public override void Spawn()
+    {
+        base.Spawn();
+
+        GetComponent<Rigidbody2D>().gravityScale = 1.0f;
+    }
+
     protected override void Move()
     {
         isMoving = true;

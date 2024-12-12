@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class Bat : Enemy
 {
+    public override void Spawn()
+    {
+        base.Spawn();
+
+        GetComponent<Rigidbody2D>().gravityScale = 0.0f;
+    }
+
     protected new void Awake()
     {
         base.Awake();
