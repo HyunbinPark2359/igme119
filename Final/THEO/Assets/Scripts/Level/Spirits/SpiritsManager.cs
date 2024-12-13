@@ -7,6 +7,9 @@ public class SpiritsManager : MonoBehaviour
     [SerializeField] private SpiritController fireSpirit;
     [SerializeField] private SpiritController waterSpirit;
     [SerializeField] private SpiritController grassSpirit;
+    [SerializeField] private AudioClip toFire;
+    [SerializeField] private AudioClip toWater;
+    [SerializeField] private AudioClip toGrass;
     private float switchCooldown = 0.3f;
     private float cooldownTimer = Mathf.Infinity;
 
@@ -45,6 +48,7 @@ public class SpiritsManager : MonoBehaviour
             fireSpirit.gameObject.SetActive(false);
             waterSpirit.gameObject.SetActive(true);
             SetDirectionAndPosition(fireSpirit, waterSpirit);
+            SoundManager.instance.PlaySound(toWater);
         }
         else if (currentlySpawnedSpirit == SpiritMode.water)
         {
@@ -52,6 +56,7 @@ public class SpiritsManager : MonoBehaviour
             waterSpirit.gameObject.SetActive(false);
             grassSpirit.gameObject.SetActive(true);
             SetDirectionAndPosition(waterSpirit, grassSpirit);
+            SoundManager.instance.PlaySound(toGrass);
         }
         else if (currentlySpawnedSpirit == SpiritMode.grass)
         {
@@ -59,6 +64,7 @@ public class SpiritsManager : MonoBehaviour
             grassSpirit.gameObject.SetActive(false);
             fireSpirit.gameObject.SetActive(true);
             SetDirectionAndPosition(grassSpirit, fireSpirit);
+            SoundManager.instance.PlaySound(toFire);
         }
     }
 

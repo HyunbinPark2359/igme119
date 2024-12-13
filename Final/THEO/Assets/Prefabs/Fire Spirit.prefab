@@ -146,4 +146,5 @@ MonoBehaviour:
   attackCooldown: 1
   bullets:
   - {fileID: 0}
+  fireSound: {fileID: 8300000, guid: c38c7d6a056162342a00f8a344935707, type: 3}
   firePoint: {fileID: 8447058980352159942}

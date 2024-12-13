@@ -148,4 +148,5 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  fireSound: {fileID: 8300000, guid: 255c0d14da6260a479142b8b426a5568, type: 3}
   firePoint: {fileID: 2180042867800849544}
